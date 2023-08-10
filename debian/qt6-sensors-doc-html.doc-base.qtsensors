@@ -1,0 +1,9 @@
+Document: qt6-sensors-manual
+Title: Qt 6 Sensors
+Author: The Qt Company Ltd
+Abstract: This is the HTML documentation for Qt 6 Sensors
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/qt6-sensors-doc-html/html/qtsensors/qtsensors-index.html
+Files: /usr/share/doc/qt6-sensors-doc-html/html/qtsensors/*.html
