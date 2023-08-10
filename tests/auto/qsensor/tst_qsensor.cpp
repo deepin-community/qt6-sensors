@@ -1,30 +1,5 @@
-/****************************************************************************
-**
-** Copyright (C) 2016 The Qt Company Ltd.
-** Contact: https://www.qt.io/licensing/
-**
-** This file is part of the QtSensors module of the Qt Toolkit.
-**
-** $QT_BEGIN_LICENSE:GPL-EXCEPT$
-** Commercial License Usage
-** Licensees holding valid commercial Qt licenses may use this file in
-** accordance with the commercial license agreement provided with the
-** Software or, alternatively, in accordance with the terms contained in
-** a written agreement between you and The Qt Company. For licensing terms
-** and conditions see https://www.qt.io/terms-conditions. For further
-** information use the contact form at https://www.qt.io/contact-us.
-**
-** GNU General Public License Usage
-** Alternatively, this file may be used under the terms of the GNU
-** General Public License version 3 as published by the Free Software
-** Foundation with exceptions as appearing in the file LICENSE.GPL3-EXCEPT
-** included in the packaging of this file. Please review the following
-** information to ensure the GNU General Public License requirements will
-** be met: https://www.gnu.org/licenses/gpl-3.0.html.
-**
-** $QT_END_LICENSE$
-**
-****************************************************************************/
+// Copyright (C) 2016 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 
 //TESTED_COMPONENT=src/sensors
 
@@ -448,20 +423,20 @@ private slots:
         sensor.setProperty("doThis", "setOne");
         QSignalSpy spy(&sensor, SIGNAL(readingChanged()));
         sensor.start();
-        QCOMPARE(spy.count(), 1); // reading changes
+        QCOMPARE(spy.size(), 1); // reading changes
         sensor.stop();
 
         TestSensorFilter *filter2 = new MyFilter;
         sensor.addFilter(filter2);
         sensor.start();
-        QCOMPARE(spy.count(), 1); // filter suppresses reading so it does not change
+        QCOMPARE(spy.size(), 1); // filter suppresses reading so it does not change
         sensor.stop();
         delete filter2;
 
         TestSensorFilter *filter1 = new ModFilter;
         sensor.addFilter(filter1);
         sensor.start();
-        QCOMPARE(spy.count(), 2); // filter does not suppress reading
+        QCOMPARE(spy.size(), 2); // filter does not suppress reading
         sensor.stop();
         delete filter1;
     }
@@ -920,7 +895,7 @@ private slots:
         // Stopping the first instance causes the busyChanged signal to be emitted from the second instance
         QSignalSpy spy(&sensor2, SIGNAL(busyChanged()));
         sensor1.stop();
-        QCOMPARE(spy.count(), 1);
+        QCOMPARE(spy.size(), 1);
 
         // Now we can start the second instance
         sensor2.start();
@@ -933,14 +908,14 @@ private slots:
         QSignalSpy busySpy(&accelerometer, SIGNAL(busyChanged()));
         QVERIFY(accelerometer.connectToBackend());
         QVERIFY(!accelerometer.isBusy());
-        QCOMPARE(busySpy.count(), 0);
+        QCOMPARE(busySpy.size(), 0);
 
         set_test_backend_busy(&accelerometer, true);
-        QCOMPARE(busySpy.count(), 1);
+        QCOMPARE(busySpy.size(), 1);
         QVERIFY(accelerometer.isBusy());
 
         set_test_backend_busy(&accelerometer, false);
-        QCOMPARE(busySpy.count(), 2);
+        QCOMPARE(busySpy.size(), 2);
         QVERIFY(!accelerometer.isBusy());
         unregister_test_backends();
     }
@@ -954,23 +929,23 @@ private slots:
       // Change id and verify change
       sensor.setIdentifier("a");
       QCOMPARE(sensor.identifier(), "a");
-      QCOMPARE(spy.count(), 1);
+      QCOMPARE(spy.size(), 1);
 
       // Set same id and verify that no changes
       sensor.setIdentifier("a");
       QCOMPARE(sensor.identifier(), "a");
-      QCOMPARE(spy.count(), 1);
+      QCOMPARE(spy.size(), 1);
 
       // Change id and verify change
       sensor.setIdentifier(testsensorimpl::id);
       QCOMPARE(sensor.identifier(), testsensorimpl::id);
-      QCOMPARE(spy.count(), 2);
+      QCOMPARE(spy.size(), 2);
 
       // Identifier cant be changed after connected to backend
       QVERIFY(sensor.connectToBackend());
       sensor.setIdentifier("c");
       QCOMPARE(sensor.identifier(), testsensorimpl::id);
-      QCOMPARE(spy.count(), 2);
+      QCOMPARE(spy.size(), 2);
     }
 
     void testSupportedFeatures()
