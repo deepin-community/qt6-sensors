@@ -3,16 +3,16 @@ Upstream-Name: qtsensors-everywhere-src
 Source: https://download.qt.io/archive/qt/*/submodules/
 
 Files: *
-Copyright: 2016-2021 The Qt Company Ltd.
-License: LGPL-3 or GPL-2
+Copyright: 2016-2023 The Qt Company Ltd.
+License: BSD-3-clause
 
 Files: debian/*
 Copyright: 2021 Patrick Franz <deltaone@debian.org>
            2021 Lu YaNing <dluyaning@gmail.com>
+           2023 Simon Quigley <tsimonq2@debian.org>
 License: LGPL-3 or GPL-2
 
-Files: src/plugins/sensorgestures/qtsensors/qfreefallsensorgesturerecognizer.*
-       src/plugins/sensors/ios/iosaccelerometer.*
+Files: src/plugins/sensors/ios/iosaccelerometer.*
        src/plugins/sensors/ios/iosmotionmanager.*
 Copyright: 2016 Lorn Potter
 License: LGPL-3 or GPL-2
@@ -51,10 +51,8 @@ Copyright: 2016 Alexander Volkov <a.volkov@rusbitech.ru>
            2016 The Qt Company Ltd.
 License: LGPL-3 or GPL-2
 
-Files: conanfile.py
-       config.tests/winrt/main.cpp
-       tests/*
-Copyright: 2016-2021 The Qt Company Ltd.
+Files: config.tests/winrt/main.cpp
+Copyright: 2021 The Qt Company Ltd.
 License: GPL-3 with Qt-1.0 exception
 
 Files: tests/manual/sensorclerk/*

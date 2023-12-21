@@ -1,15 +1,13 @@
+# Copyright (C) 2022 The Qt Company Ltd.
+# SPDX-License-Identifier: BSD-3-Clause
+
 #####################################################################
 ## Sensors Module:
 #####################################################################
 
 qt_internal_add_module(Sensors
-    PLUGIN_TYPES sensors # sensorgestures
+    PLUGIN_TYPES sensors
     SOURCES
-    # gestures/qsensorgesture.cpp gestures/qsensorgesture.h gestures/qsensorgesture_p.h
-    # gestures/qsensorgesturemanager.cpp gestures/qsensorgesturemanager.h
-    # gestures/qsensorgesturemanagerprivate.cpp gestures/qsensorgesturemanagerprivate_p.h
-    # gestures/qsensorgestureplugininterface.cpp gestures/qsensorgestureplugininterface.h
-    # gestures/qsensorgesturerecognizer.cpp gestures/qsensorgesturerecognizer.h
     qsensorbackend.cpp qsensorbackend.h
     qsensormanager.cpp qsensormanager.h
     qsensorplugin.cpp qsensorplugin.h
@@ -79,7 +77,7 @@ qt_internal_add_module(Sensors
 
 if(ANDROID)
     set_property(TARGET Sensors APPEND PROPERTY QT_ANDROID_LIB_DEPENDENCIES
-        plugins/sensors/libplugins_sensors_qtsensors_android.so
+        ${INSTALL_PLUGINSDIR}/sensors/libplugins_sensors_qtsensors_android.so
     )
 endif()
 
