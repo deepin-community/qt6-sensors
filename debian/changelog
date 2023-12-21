@@ -1,3 +1,31 @@
+qt6-sensors (6.6.1-2) experimental; urgency=medium
+
+  * Revert the resolution of the dh-exec-useless-usage Lintian info by using
+    a wildcard in place of the flag. Team policy is to use the flag.
+  * Keep the doc build dependencies at 6.6~.
+  * Remove unnecessary QML build dependencies.
+  * Merge libqt6sensorsquick6 into qml6-module-qtsensors and add appropriate
+    Breaks/Replaces.
+  * Complete the rename from libqt6sensors6-dev to qt6-sensors-dev by updating
+    the build dependency in the symbols file.
+
+ -- Simon Quigley <tsimonq2@debian.org>  Tue, 12 Dec 2023 15:47:09 -0600
+
+qt6-sensors (6.6.1-1) experimental; urgency=medium
+
+  * New upstream release.
+    - Bump build dependencies.
+    - Update debian/copyright to reflect move to BSD-3-clause.
+    - Update the install files appropriately.
+  * Add my name to Uploaders.
+  * Update symbols from amd64 build logs.
+  * Resolve the dh-exec-useless-usage Lintian info by using a wildcard
+    in place of the flag.
+  * Add an upstream metadata file.
+  * Fix remaining miscellaneous Lintian overrides.
+
+ -- Simon Quigley <tsimonq2@debian.org>  Tue, 12 Dec 2023 14:34:30 -0600
+
 qt6-sensors (6.4.2-4) unstable; urgency=medium
 
   [ Patrick Franz ]

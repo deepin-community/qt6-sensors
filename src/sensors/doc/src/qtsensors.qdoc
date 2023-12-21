@@ -38,13 +38,13 @@
         \li \l {Generic Backend} {Generic Backend}
         \li \l {Qt Sensors Backend}
         \li \l {Compatibility Map} {Compatibility Map}
+        \li \l {How to create your own Sensor}
     \endlist
 
     \section1 Examples
 
     \list
         \li \l {Qt Sensors Examples} {Examples}
-        \li \l {Qt Sensors - Grue Sensor Example}
     \endlist
 
     \section1 API Reference

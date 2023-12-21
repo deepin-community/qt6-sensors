@@ -1,8 +1,1 @@
-usr/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/accelbubble/accelbubble
-usr/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/grue/grue_app
-usr/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/grue/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/grue/detect_grue
-usr/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/grue/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/grue/sensors/libqtsensors_grue.so
-usr/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/maze/maze
-usr/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/qmlqtsensors/qmlqtsensors
-usr/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/sensor_explorer/sensor_explorer
 usr/lib/${DEB_HOST_MULTIARCH}/qt6/examples/sensors/sensorsshowcase/sensorsshowcase

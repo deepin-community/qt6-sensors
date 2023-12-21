@@ -1,3 +1,4 @@
 usr/lib/${DEB_HOST_MULTIARCH}/qt6/qml/QtSensors/libsensorsquickplugin.so
 usr/lib/${DEB_HOST_MULTIARCH}/qt6/qml/QtSensors/plugins.qmltypes
 usr/lib/${DEB_HOST_MULTIARCH}/qt6/qml/QtSensors/qmldir
+usr/lib/${DEB_HOST_MULTIARCH}/libQt6SensorsQuick.so.*
